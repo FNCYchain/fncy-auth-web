@@ -1,6 +1,6 @@
 {
   "name": "fncy_auth_web",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/FNCYchain/fncy_auth_web.git"
   },
-  "author": "Metaverse Labs",
+  "author": "ms.kang(ms.kang@nm-metaworld.com",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/FNCYchain/fncy_auth_web/issues"
@@ -19,11 +19,9 @@
   "homepage": "https://github.com/FNCYchain/fncy_auth_web#readme",
   "devDependencies": {
     "@types/pluralize": "^0.0.30",
+    "axios": "^1.4.0",
     "chai": "^4.3.7",
     "mocha": "^10.2.0",
     "typescript": "^5.1.6"
-  },
-  "dependencies": {
-    "pluralize": "^8.0.0"
   }
 }
