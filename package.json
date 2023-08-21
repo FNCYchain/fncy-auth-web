@@ -1,5 +1,5 @@
 {
-  "name": "@fncy-web/auth",
+  "name": "fncy-web/auth",
   "version": "0.0.4",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
