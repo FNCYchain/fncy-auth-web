@@ -1,14 +1,5 @@
 import axios from 'axios';
 
-interface FncyUserAuth {
-    jti: string;
-    access_token: string;
-    token_type: string;
-    expires_in: number;
-    scope: Array<string>;
-    refresh_token: string;
-}
-
 const getUserAuthToken = async (url: string,
                                 email: string,
                                 password: string) => {
@@ -18,7 +9,15 @@ const getUserAuthToken = async (url: string,
         const uuid = '4B8DE499-E3C7-45A7-A778-43F895B07972'
         const lang = 'en'
 
-        const response = await axios.post<FncyUserAuth>( url, {
+        const response = await axios.post<{
+            jti: string;
+            access_token: string;
+            token_type: string;
+            expires_in: number;
+            scope: Array<string>;
+            refresh_token: string; }>(
+                url,
+            {
                 "channel_type" : "email",
                 "grant_type" : "password",
                 udid : uuid,
@@ -26,7 +25,8 @@ const getUserAuthToken = async (url: string,
                 username: email,
                 password: password
             },
-            {headers:{
+            {
+                headers:{
                     Authorization: `Basic Y3ViZS1tb2JpbGVhdXRoOmxoS2hWdlBFRmtqN0VDNjFWdG9DS2g1Q2ZhSndKNA==`,
                     'Content-Type': 'application/x-www-form-urlencoded',
                 }
@@ -37,7 +37,6 @@ const getUserAuthToken = async (url: string,
         throw error;
     }
 }
-
 
 /**
  * @Method: Returns the plural form of any noun.
@@ -58,3 +57,4 @@ export function getAuthTokenWithEmail(baseURL: string,
     return getUserAuthToken(`${baseURL}/api/oauth/token`, email, password)
 
 }
+

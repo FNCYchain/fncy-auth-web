@@ -1,6 +1,6 @@
 {
-  "name": "fncy-auth-web",
-  "version": "0.0.3",
+  "name": "@fncy-web/auth",
+  "version": "0.0.4",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/FNCYchain/fncy_auth_web.git"
   },
-  "author": "ms.kang(ms.kang@nm-metaworld.com",
+  "author": "ms.kang(ms.kang@nm-metaworld.com)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/FNCYchain/fncy_auth_web/issues"
