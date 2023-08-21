@@ -2,7 +2,7 @@
 
 ## Installation
 ```sh
-npm install fncy-auth-web
+npm install fncy-web-auth
 ```
 
 ## Usage
